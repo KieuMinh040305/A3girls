@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c6b15b4cc4.js" crossorigin="anonymous"></script>
+    <script src="password.js"></script>
+</head>
+<body>
+    <div class="form-box">
+        <h1>Đăng nhập nè ≧◡≦</h1>
+        <div class="input-box">
+            <i class="fa fa-female"></i>
+            <input type="ten" placeholder="Tên của cậu">
+        </div>
+        <div class="input-box">
+            <form class="passform" action="homepage.html" onsubmit="return passcheck()">
+                <i class="fa fa-keyboard-o"></i>
+                <input type="password" required id="myInput" placeholder="Password">
+                <span class="eye" onclick="myFunction()">
+                    <i id="hide1" class="fa fa-eye"></i>
+                    <i id="hide2" class="fa fa-eye-slash"></i>
+                </span>
+            </form>
+        </div>
+       
+        <a href="homepage.html" class="login-btn" onclick="return passcheck()">Login</a>
+
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myInput");
+                    var y = document.getElementById("hide1");
+                    var z = document.getElementById("hide2");
+
+                    if(x.type === 'password') {
+                        x.type = "text"
+                        y.style.display = "block"
+                        z.style.display = "none"
+                    }
+                    else {
+                        x.type = "password"
+                        y.style.display = "none"
+                        z.style.display = "block"
+                    }
+                }
+            </script>
+        
+    </div>
+</body>
+</html>
